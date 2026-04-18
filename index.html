@@ -176,6 +176,12 @@ footer a { color:var(--text3); }
 @media(max-width:420px) {
   .link-banner { flex-wrap:wrap; }
 }
+.banner-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;margin:16px 0;}
+.banner-card{background:#fff;border-radius:12px;box-shadow:0 4px 16px rgba(155,126,200,0.12);padding:14px 16px;border-top:3px solid #e88fa8;display:block;transition:transform .2s;text-decoration:none;color:inherit;}
+.banner-card:hover{transform:translateY(-2px);}
+.banner-card .icon{font-size:1.4rem;}
+.banner-card .title{font-size:.85rem;font-weight:700;color:#3a2a3e;margin-top:4px;}
+.banner-card .desc{font-size:.76rem;color:#7a607e;margin-top:2px;}
 </style>
 </head>
 <body>
@@ -217,49 +223,46 @@ footer a { color:var(--text3); }
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
-  <!-- 関連サイト -->
-  <div class="card">
-    <div class="card-title">🔗 関連ツール</div>
-    <a class="link-banner ninsin" href="https://ninsin-keisan.vercel.app/" target="_blank" rel="noopener">
-      <div class="banner-icon">🤰</div>
-      <div class="banner-body">
-        <h3>妊娠週数・出産予定日計算ツール</h3>
-        <p>最終月経日から妊娠週数・出産予定日を自動計算。赤ちゃんの成長記録つき。</p>
-      </div>
-      <div class="banner-arrow">›</div>
-    </a>
-    <a class="link-banner namae" href="https://namae-compass.vercel.app/" target="_blank" rel="noopener">
-      <div class="banner-icon">✨</div>
-      <div class="banner-body">
-        <h3>赤ちゃんの名前ランキング・候補検索</h3>
-        <p>人気の名前ランキングや名前の意味・読み方を検索。素敵な名前を見つけよう。</p>
-      </div>
-      <div class="banner-arrow">›</div>
-    </a>
-    <a class="link-banner shokuhin" href="https://ninpu-shokuhin-check.vercel.app/" target="_blank" rel="noopener">
-      <div class="banner-icon">🥗</div>
-      <div class="banner-body">
-        <h3>妊婦の食べ物OK・NGチェッカー</h3>
-        <p>妊娠中に食べていいもの・ダメなものを即チェック。食材別に詳しく解説。</p>
-      </div>
-      <div class="banner-arrow">›</div>
-    </a>
-    <a class="link-banner ng" href="https://ninpu-ng-check.vercel.app/" target="_blank" rel="noopener">
-      <div class="banner-icon">🚫</div>
-      <div class="banner-body">
-        <h3>妊婦のNG行動チェックリスト</h3>
-        <p>妊娠中にやってはいけないこと50項目以上を3段階リスクで解説。</p>
-      </div>
-      <div class="banner-arrow">›</div>
-    </a>
-    <a class="link-banner hairan" href="https://hairan-keisan.vercel.app/" target="_blank" rel="noopener">
-      <div class="banner-icon">🌸</div>
-      <div class="banner-body">
-        <h3>排卵日計算ツール</h3>
-        <p>妊活中の方へ。タイミング法・次の生理予定日を自動計算。</p>
-      </div>
-      <div class="banner-arrow">›</div>
-    </a>
+  <!-- 関連ツール -->
+  <div style="margin-top:20px;">
+    <div style="font-size:1rem;font-weight:700;color:#9b7ec8;margin-bottom:12px;">🔗 関連ツール</div>
+    <div class="banner-grid">
+      <a class="banner-card" href="https://ninsin-keisan.vercel.app/">
+        <div class="icon">📅</div>
+        <div class="title">妊娠週数・出産予定日</div>
+        <div class="desc">最終生理日から週数と予定日を計算</div>
+      </a>
+      <a class="banner-card" href="https://ninpu-shokuhin-check.vercel.app/">
+        <div class="icon">🥗</div>
+        <div class="title">妊婦の食べ物OK・NG</div>
+        <div class="desc">食べていいもの・ダメなものを即確認</div>
+      </a>
+      <a class="banner-card" href="https://ninpu-ng-check.vercel.app/">
+        <div class="icon">🚫</div>
+        <div class="title">妊婦のNG行動チェック</div>
+        <div class="desc">妊娠中に避けるべき行動を確認</div>
+      </a>
+      <a class="banner-card" href="https://ninshin-kakuritsu.vercel.app/">
+        <div class="icon">🌸</div>
+        <div class="title">妊娠確率計算ツール</div>
+        <div class="desc">タイミング×年齢で確率を診断</div>
+      </a>
+      <a class="banner-card" href="https://kentai-timing.vercel.app/">
+        <div class="icon">🔬</div>
+        <div class="title">妊娠検査薬タイミング</div>
+        <div class="desc">フライングOK日と正確な検査タイミング</div>
+      </a>
+      <a class="banner-card" href="https://tsuwari-check.vercel.app/">
+        <div class="icon">🤢</div>
+        <div class="title">つわりチェック</div>
+        <div class="desc">週数別のつわり症状・対処法を表示</div>
+      </a>
+      <a class="banner-card" href="https://namae-compass.vercel.app/">
+        <div class="icon">✨</div>
+        <div class="title">赤ちゃんの名前コンパス</div>
+        <div class="desc">画数・イメージで名前を探す</div>
+      </a>
+    </div>
   </div>
 
   <!-- SEOコンテンツ -->
