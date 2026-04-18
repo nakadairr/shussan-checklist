@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>OGP生成｜出産準備チェックリスト</title></head>
+<body style="background:#f8f5ff;display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:100vh;margin:0">
+<canvas id="c" width="1200" height="630"></canvas>
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const W = 1200, H = 630;
+
+function roundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x+r,y); ctx.lineTo(x+w-r,y);
+  ctx.quadraticCurveTo(x+w,y,x+w,y+r);
+  ctx.lineTo(x+w,y+h-r);
+  ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);
+  ctx.lineTo(x+r,y+h);
+  ctx.quadraticCurveTo(x,y+h,x,y+h-r);
+  ctx.lineTo(x,y+r);
+  ctx.quadraticCurveTo(x,y,x+r,y);
+  ctx.closePath();
+}
+
+// 背景
+const bg = ctx.createLinearGradient(0, 0, W, H);
+bg.addColorStop(0, '#fff5fb');
+bg.addColorStop(0.5, '#f8f0ff');
+bg.addColorStop(1, '#f0f8ff');
+ctx.fillStyle = bg;
+ctx.fillRect(0, 0, W, H);
+
+// グロー（右上）
+const g1 = ctx.createRadialGradient(W*0.85, H*0.15, 0, W*0.85, H*0.15, 280);
+g1.addColorStop(0, 'rgba(122,186,138,0.22)');
+g1.addColorStop(1, 'transparent');
+ctx.fillStyle = g1;
+ctx.fillRect(0, 0, W, H);
+
+// グロー（左下）
+const g2 = ctx.createRadialGradient(W*0.15, H*0.85, 0, W*0.15, H*0.85, 240);
+g2.addColorStop(0, 'rgba(155,126,200,0.2)');
+g2.addColorStop(1, 'transparent');
+ctx.fillStyle = g2;
+ctx.fillRect(0, 0, W, H);
+
+// 装飾（丸）
+[[80,80,18],[180,50,12],[1100,80,20],[1050,160,12],[60,540,14],[140,590,18],[1120,520,16],[1080,590,12],[600,35,10],[400,590,14],[800,580,10]].forEach(([x,y,r])=>{
+  ctx.beginPath();
+  ctx.arc(x, y, r, 0, Math.PI*2);
+  ctx.fillStyle = 'rgba(122,186,138,0.15)';
+  ctx.fill();
+});
+
+// 枠線
+ctx.strokeStyle = 'rgba(122,186,138,0.35)';
+ctx.lineWidth = 2;
+roundRect(ctx, 36, 36, W-72, H-72, 24);
+ctx.stroke();
+
+// 角の飾り
+[[36,36,1,1],[W-36,36,-1,1],[36,H-36,1,-1],[W-36,H-36,-1,-1]].forEach(([x,y,dx,dy])=>{
+  ctx.beginPath();
+  ctx.moveTo(x+dx*28, y);
+  ctx.lineTo(x, y);
+  ctx.lineTo(x, y+dy*28);
+  ctx.strokeStyle = 'rgba(155,126,200,0.5)';
+  ctx.lineWidth = 2.5;
+  ctx.stroke();
+});
+
+// メインアイコン
+ctx.font = '100px serif';
+ctx.textAlign = 'center';
+ctx.fillText('🍼', W/2, 200);
+
+// タイトル
+const tg = ctx.createLinearGradient(W/2-420, 0, W/2+420, 0);
+tg.addColorStop(0, '#507a60');
+tg.addColorStop(0.35, '#7aba8a');
+tg.addColorStop(0.65, '#9b7ec8');
+tg.addColorStop(1, '#507a60');
+ctx.fillStyle = tg;
+ctx.font = 'bold 60px "Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif';
+ctx.shadowColor = 'rgba(122,186,138,0.3)';
+ctx.shadowBlur = 16;
+ctx.fillText('出産準備チェックリスト', W/2, 315);
+ctx.shadowBlur = 0;
+
+// サブタイトル
+ctx.fillStyle = 'rgba(58,42,62,0.5)';
+ctx.font = '26px "Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif';
+ctx.fillText('入院バッグ・ベビー用品・手続きをまとめて管理', W/2, 372);
+
+// 区切り
+ctx.beginPath();
+ctx.moveTo(W/2-140,400); ctx.lineTo(W/2-20,400);
+ctx.moveTo(W/2+20,400); ctx.lineTo(W/2+140,400);
+ctx.strokeStyle='rgba(122,186,138,0.4)'; ctx.lineWidth=1; ctx.stroke();
+ctx.font='14px serif'; ctx.fillStyle='rgba(122,186,138,0.8)';
+ctx.fillText('✦', W/2, 405);
+
+// URL
+ctx.fillStyle = 'rgba(155,126,200,0.65)';
+ctx.font = '22px "Hiragino Kaku Gothic ProN",sans-serif';
+ctx.fillText('shussan-checklist.vercel.app', W/2, 452);
+
+// タグ
+const tags = ['入院バッグ', 'ベビー用品', '授乳グッズ', 'お風呂グッズ', '手続き一覧'];
+const colors = [
+  ['rgba(252,232,240,0.8)','rgba(232,143,168,0.6)'],
+  ['rgba(228,245,232,0.8)','rgba(122,186,138,0.6)'],
+  ['rgba(240,232,255,0.8)','rgba(155,126,200,0.6)'],
+  ['rgba(253,240,218,0.8)','rgba(200,160,90,0.6)'],
+  ['rgba(224,240,252,0.8)','rgba(122,176,212,0.6)'],
+];
+const tw = 160, gap = 12;
+const total = tags.length * tw + (tags.length-1) * gap;
+const sx = (W - total) / 2;
+tags.forEach((tag, i) => {
+  const tx = sx + i*(tw+gap);
+  ctx.fillStyle = colors[i][0];
+  roundRect(ctx, tx, 480, tw, 36, 18); ctx.fill();
+  ctx.strokeStyle = colors[i][1]; ctx.lineWidth = 1;
+  roundRect(ctx, tx, 480, tw, 36, 18); ctx.stroke();
+  ctx.fillStyle = 'rgba(58,42,62,0.75)';
+  ctx.font = '15px "Hiragino Kaku Gothic ProN",sans-serif';
+  ctx.fillText(tag, tx + tw/2, 503);
+});
+
+// 無料バッジ
+ctx.fillStyle = 'rgba(122,186,138,0.9)';
+roundRect(ctx, W/2-36, 535, 72, 26, 13); ctx.fill();
+ctx.fillStyle = '#fff'; ctx.font = 'bold 13px sans-serif';
+ctx.fillText('チェック保存', W/2, 553);
+
+setTimeout(() => {
+  const a = document.createElement('a');
+  a.download = 'ogp.png';
+  a.href = canvas.toDataURL('image/png');
+  a.click();
+  document.body.innerHTML += '<p style="color:#7aba8a;text-align:center;font-family:sans-serif;margin-top:20px">✅ ogp.png をダウンロードしました！プロジェクトフォルダに置いてpushしてください。</p>';
+}, 500);
+</script>
+</body>
+</html>

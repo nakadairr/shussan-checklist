@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>出産準備チェックリスト【無料】入院バッグ・ベビー用品・手続きを一括管理</title>
+<meta name="description" content="出産準備に必要なものをカテゴリ別にチェック。入院バッグ・ベビー用品・授乳グッズ・退院後の手続きまで網羅。チェック状態は自動保存されます。">
+<link rel="canonical" href="https://shussan-checklist.vercel.app/">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="出産準備チェックリスト【無料】">
+<meta property="og:description" content="入院バッグ・ベビー用品・手続きを一括管理。チェック状態は自動保存。妊婦さん必見の準備リスト。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shussan-checklist.vercel.app/">
+<meta property="og:image" content="https://shussan-checklist.vercel.app/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "出産準備チェックリスト",
+      "url": "https://shussan-checklist.vercel.app/",
+      "description": "出産準備に必要なものをカテゴリ別にチェックできる無料ツール",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "入院バッグはいつ準備すればいい？",
+          "acceptedAnswer": { "@type": "Answer", "text": "妊娠34〜36週頃までに準備しておくと安心です。早産になる可能性もあるため、遅くとも妊娠36週までには入院バッグをまとめておきましょう。" }
+        },
+        {
+          "@type": "Question",
+          "name": "ベビー用品はいつから揃えると良い？",
+          "acceptedAnswer": { "@type": "Answer", "text": "安定期（妊娠16週頃〜）に入ってから少しずつ準備するのがおすすめです。ベビーベッドや大型グッズは妊娠7〜8ヶ月頃、退院後すぐ必要なものは妊娠9ヶ月までに揃えましょう。" }
+        },
+        {
+          "@type": "Question",
+          "name": "出生届はいつまでに提出する？",
+          "acceptedAnswer": { "@type": "Answer", "text": "出生届は赤ちゃんが生まれた日を含めて14日以内に、市区町村の窓口へ提出する必要があります。24時間受け付けている窓口もあります。" }
+        },
+        {
+          "@type": "Question",
+          "name": "チャイルドシートは本当に必要？",
+          "acceptedAnswer": { "@type": "Answer", "text": "6歳未満の幼児を乗せる場合、チャイルドシートの使用は道路交通法で義務付けられています。退院時に車で帰宅する場合は必ず事前に準備しておきましょう。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script> -->
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3985655020038392" crossorigin="anonymous"></script>
+
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --bg:     #f8f5ff;
+  --bg2:    #ffffff;
+  --pink:   #e88fa8;
+  --pink-l: #fce8f0;
+  --blue:   #7ab0d4;
+  --blue-l: #e0f0fc;
+  --purple: #9b7ec8;
+  --pur-l:  #f0e8ff;
+  --green:  #7aba8a;
+  --grn-l:  #e4f5e8;
+  --gold:   #c8a05a;
+  --gld-l:  #fdf0da;
+  --text:   #3a2a3e;
+  --text2:  #7a607e;
+  --text3:  #b09ab8;
+  --border: #e8d8f0;
+  --shadow: rgba(58,42,62,0.08);
+}
+body { background:var(--bg); color:var(--text); font-family:'Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif; min-height:100vh; }
+
+/* ── ヘッダー ── */
+.site-header { background:var(--bg2); border-bottom:1px solid var(--border); padding:24px 16px 20px; text-align:center; box-shadow:0 2px 12px var(--shadow); }
+.header-icon { font-size:36px; margin-bottom:6px; }
+.site-header h1 { font-size:clamp(18px,5vw,26px); font-weight:700; color:var(--text); line-height:1.3; }
+.site-header h1 span { color:var(--pink); }
+.site-header p { font-size:12px; color:var(--text3); margin-top:5px; }
+
+/* ── レイアウト ── */
+#app { max-width:720px; margin:0 auto; padding:20px 16px 80px; }
+
+/* ── 広告 ── */
+.ad-area { background:var(--bg2); border:1px dashed var(--border); border-radius:8px; min-height:90px; display:flex; align-items:center; justify-content:center; color:var(--text3); font-size:11px; margin:16px 0; overflow:hidden; }
+
+/* ── カード共通 ── */
+.card { background:var(--bg2); border:1px solid var(--border); border-radius:20px; padding:24px 20px; margin-bottom:18px; box-shadow:0 2px 12px var(--shadow); }
+.card-title { font-size:13px; font-weight:700; color:var(--text2); letter-spacing:0.1em; margin-bottom:16px; padding-bottom:10px; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:6px; }
+
+/* ── 全体進捗 ── */
+.overall-card { background:linear-gradient(135deg,var(--pink-l),var(--pur-l)); border:1px solid rgba(232,143,168,0.3); }
+.overall-nums { display:flex; align-items:baseline; justify-content:center; gap:6px; margin-bottom:12px; }
+.overall-pct { font-size:clamp(52px,14vw,72px); font-weight:900; color:var(--text); line-height:1; }
+.overall-pct span { font-size:0.4em; color:var(--text2); }
+.overall-count { font-size:13px; color:var(--text2); }
+.overall-bar { background:rgba(255,255,255,0.6); border-radius:100px; height:12px; overflow:hidden; margin-bottom:8px; }
+.overall-fill { height:100%; border-radius:100px; background:linear-gradient(90deg,var(--pink),var(--purple)); transition:width 0.6s cubic-bezier(0.2,1,0.3,1); }
+.overall-msg { text-align:center; font-size:12px; color:var(--text2); }
+.btn-reset { display:block; margin:14px auto 0; padding:8px 24px; background:transparent; border:1.5px solid var(--border); border-radius:50px; color:var(--text3); font-size:12px; font-family:inherit; cursor:pointer; transition:all 0.15s; }
+.btn-reset:hover { border-color:var(--pink); color:var(--pink); }
+
+/* ── カテゴリ ── */
+.cat-header { display:flex; align-items:center; justify-content:space-between; cursor:pointer; user-select:none; }
+.cat-left { display:flex; align-items:center; gap:8px; }
+.cat-icon { font-size:20px; }
+.cat-name { font-size:15px; font-weight:700; color:var(--text); }
+.cat-right { display:flex; align-items:center; gap:8px; }
+.cat-count { font-size:12px; color:var(--text3); }
+.cat-chevron { font-size:12px; color:var(--text3); transition:transform 0.2s; }
+.cat-card.open .cat-chevron { transform:rotate(180deg); }
+
+.cat-bar-wrap { margin:10px 0 4px; }
+.cat-bar { background:var(--bg); border-radius:100px; height:6px; overflow:hidden; }
+.cat-fill { height:100%; border-radius:100px; transition:width 0.4s ease; }
+
+.cat-items { overflow:hidden; max-height:0; transition:max-height 0.35s ease; }
+.cat-card.open .cat-items { max-height:2000px; }
+.items-inner { padding-top:14px; display:flex; flex-direction:column; gap:8px; }
+
+/* ── チェックアイテム ── */
+.item-row { display:flex; align-items:flex-start; gap:10px; cursor:pointer; padding:10px 12px; border-radius:12px; border:1.5px solid transparent; transition:all 0.15s; background:var(--bg); }
+.item-row:hover { background:var(--pink-l); border-color:rgba(232,143,168,0.3); }
+.item-row.checked { background:var(--grn-l); border-color:rgba(122,186,138,0.4); }
+.item-checkbox { flex-shrink:0; width:20px; height:20px; border-radius:6px; border:2px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:12px; transition:all 0.15s; margin-top:1px; }
+.item-row.checked .item-checkbox { background:var(--green); border-color:var(--green); color:#fff; }
+.item-text { font-size:13px; color:var(--text); line-height:1.6; flex:1; }
+.item-row.checked .item-text { color:var(--text3); text-decoration:line-through; }
+.item-note { font-size:11px; color:var(--text3); margin-top:2px; }
+.item-row.checked .item-note { text-decoration:line-through; }
+
+/* ── 関連サイトバナー ── */
+.link-banner { border-radius:20px; padding:20px; display:flex; align-items:center; gap:14px; text-decoration:none; margin-bottom:14px; transition:transform 0.15s; }
+.link-banner:hover { transform:translateY(-2px); }
+.link-banner.ninsin { background:linear-gradient(135deg,var(--pink-l),var(--pur-l)); border:1px solid rgba(232,143,168,0.3); }
+.link-banner.namae { background:linear-gradient(135deg,var(--blue-l),var(--grn-l)); border:1px solid rgba(122,176,212,0.3); }
+.banner-icon { font-size:32px; flex-shrink:0; }
+.banner-body h3 { font-size:14px; font-weight:700; color:var(--text); margin-bottom:3px; }
+.banner-body p { font-size:12px; color:var(--text2); line-height:1.6; }
+.banner-arrow { margin-left:auto; font-size:18px; color:var(--text3); flex-shrink:0; }
+
+/* ── SEOコンテンツ ── */
+.seo-section { font-size:14px; color:var(--text2); line-height:1.9; }
+.seo-section h2 { font-size:16px; color:var(--text); margin:0 0 10px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+.seo-section h3 { font-size:14px; color:var(--text); margin:16px 0 6px; font-weight:700; }
+.seo-section p { margin-bottom:10px; }
+
+/* ── フッター ── */
+footer { text-align:center; padding:32px 16px 20px; color:var(--text3); font-size:11px; line-height:1.8; }
+footer a { color:var(--text3); }
+
+@media(max-width:420px) {
+  .link-banner { flex-wrap:wrap; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-icon">🍼</div>
+  <h1><span>出産準備</span>チェックリスト</h1>
+  <p>入院バッグ・ベビー用品・手続きをまとめて管理｜チェック状態は自動保存</p>
+</header>
+
+<div id="app">
+
+  <!-- 広告（上） -->
+  <div class="ad-area">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3985655020038392" data-ad-slot="9624849394" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- 全体進捗 -->
+  <div class="card overall-card" id="overall-card">
+    <div class="card-title">📊 全体の準備状況</div>
+    <div class="overall-nums">
+      <div class="overall-pct" id="overall-pct">0<span>%</span></div>
+      <div class="overall-count" id="overall-count">0 / 0 項目</div>
+    </div>
+    <div class="overall-bar">
+      <div class="overall-fill" id="overall-fill" style="width:0%"></div>
+    </div>
+    <div class="overall-msg" id="overall-msg">チェックを始めましょう！</div>
+    <button class="btn-reset" onclick="resetAll()">🔄 全リセット</button>
+  </div>
+
+  <!-- カテゴリ一覧 -->
+  <div id="categories"></div>
+
+  <!-- 広告（中） -->
+  <div class="ad-area">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3985655020038392" data-ad-slot="9624849394" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- 関連サイト -->
+  <div class="card">
+    <div class="card-title">🔗 関連ツール</div>
+    <a class="link-banner ninsin" href="https://ninsin-keisan.vercel.app/" target="_blank" rel="noopener">
+      <div class="banner-icon">🤰</div>
+      <div class="banner-body">
+        <h3>妊娠週数・出産予定日計算ツール</h3>
+        <p>最終月経日から妊娠週数・出産予定日を自動計算。赤ちゃんの成長記録つき。</p>
+      </div>
+      <div class="banner-arrow">›</div>
+    </a>
+    <a class="link-banner namae" href="https://aka-chan-namae.vercel.app/" target="_blank" rel="noopener">
+      <div class="banner-icon">✨</div>
+      <div class="banner-body">
+        <h3>赤ちゃんの名前ランキング・候補検索</h3>
+        <p>人気の名前ランキングや名前の意味・読み方を検索。素敵な名前を見つけよう。</p>
+      </div>
+      <div class="banner-arrow">›</div>
+    </a>
+  </div>
+
+  <!-- SEOコンテンツ -->
+  <div class="card seo-section">
+    <h2>出産準備チェックリストの使い方</h2>
+    <p>各カテゴリをタップすると項目が展開されます。準備ができた項目にチェックを入れると、全体の進捗がリアルタイムで更新されます。チェック状態はブラウザに自動保存されるため、次回アクセス時も引き続き使えます。</p>
+
+    <h3>いつから準備を始めればいい？</h3>
+    <p>一般的には安定期（妊娠16週頃〜）から少しずつ準備を始めるのがおすすめです。ベビーベッドなど大型用品は妊娠7〜8ヶ月（28〜31週）、入院バッグは妊娠34〜36週までに用意しておくと安心です。</p>
+
+    <h3>入院バッグに必ず入れるべきものは？</h3>
+    <p>母子手帳・診察券・保険証は絶対に忘れずに。前開きのパジャマ・授乳ブラ・産褥ショーツは入院中に大活躍します。ストロー付きの飲み物・スマホ充電器・現金も忘れがちなので早めに準備しましょう。</p>
+
+    <h3>ベビー用品で本当に必要なものは？</h3>
+    <p>チャイルドシートは退院時に車で帰る場合、法律上必須です。肌着・ベビー服・おむつ・沐浴グッズは生後すぐ必要になります。ベビーカーや搾乳機など高額なものは、出産後に必要性を判断してから購入する方が無駄になりません。</p>
+  </div>
+
+  <!-- 広告（下） -->
+  <div class="ad-area">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3985655020038392" data-ad-slot="9624849394" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+</div>
+
+<footer>
+  <p><a href="./privacy.html">プライバシーポリシー</a> ｜ <a href="./contact.html">お問い合わせ</a></p>
+  <p style="margin-top:6px;">© 2026 出産準備チェックリスト</p>
+</footer>
+
+<script>
+const CATEGORIES = [
+  {
+    id: 'nyuuin-mama',
+    icon: '🧳',
+    name: '入院バッグ（ママ用）',
+    color: '#e88fa8',
+    colorLight: '#fce8f0',
+    items: [
+      { id: 'm01', text: '母子手帳', note: '最重要！絶対忘れずに' },
+      { id: 'm02', text: '診察券・健康保険証・限度額適用認定証' },
+      { id: 'm03', text: '入院申込書類・印鑑' },
+      { id: 'm04', text: '前開きパジャマ × 2〜3枚', note: '授乳しやすい前開きタイプが便利' },
+      { id: 'm05', text: '授乳ブラ × 2〜3枚' },
+      { id: 'm06', text: '産褥ショーツ × 3〜5枚', note: '病院で指定がある場合も' },
+      { id: 'm07', text: '腹帯・さらし（必要な場合）' },
+      { id: 'm08', text: '洗面用具（歯ブラシ・シャンプー・ボディソープ）' },
+      { id: 'm09', text: 'タオル × 2〜3枚' },
+      { id: 'm10', text: 'スリッパ（かかとのあるタイプ推奨）' },
+      { id: 'm11', text: 'ストロー付きボトル・飲み物' },
+      { id: 'm12', text: 'スマホ充電器・モバイルバッテリー' },
+      { id: 'm13', text: '現金・小銭（自販機・売店用）' },
+      { id: 'm14', text: 'ヘアゴム・ヘアピン' },
+      { id: 'm15', text: '筆記用具・メモ帳' },
+      { id: 'm16', text: '読み物・タブレット（暇つぶし用）' },
+      { id: 'm17', text: '退院用の着替え（ゆったりしたもの）' },
+    ]
+  },
+  {
+    id: 'nyuuin-baby',
+    icon: '👶',
+    name: '入院バッグ（赤ちゃん用）',
+    color: '#9b7ec8',
+    colorLight: '#f0e8ff',
+    items: [
+      { id: 'b01', text: '短肌着 × 2〜3枚', note: '退院時・お見舞い用' },
+      { id: 'b02', text: 'コンビ肌着 × 2〜3枚' },
+      { id: 'b03', text: 'カバーオール・ベビー服 × 1〜2枚', note: '退院着に' },
+      { id: 'b04', text: 'おくるみ・バスタオル × 1〜2枚' },
+      { id: 'b05', text: 'おむつ（病院支給か要確認）' },
+      { id: 'b06', text: 'ぬれたおしりふき（病院支給か要確認）' },
+    ]
+  },
+  {
+    id: 'baby-goods',
+    icon: '🛏️',
+    name: '寝具・移動グッズ',
+    color: '#7ab0d4',
+    colorLight: '#e0f0fc',
+    items: [
+      { id: 's01', text: 'ベビーベッド or ベビー布団セット', note: '早めに準備・設置しておくと安心' },
+      { id: 's02', text: 'チャイルドシート', note: '退院時に車で帰る場合は法律上必須' },
+      { id: 's03', text: '抱っこ紐', note: '新生児対応か確認' },
+      { id: 's04', text: 'ベビーカー', note: '生後1〜2ヶ月以降から使用可が多い' },
+      { id: 's05', text: 'バウンサー or ハイローチェア（あると便利）' },
+      { id: 's06', text: 'ベビーモニター（必要に応じて）' },
+    ]
+  },
+  {
+    id: 'clothes',
+    icon: '👗',
+    name: 'ベビー服・肌着',
+    color: '#e88fa8',
+    colorLight: '#fce8f0',
+    items: [
+      { id: 'c01', text: '短肌着 × 5〜6枚', note: '新生児は1日何度も着替える' },
+      { id: 'c02', text: 'コンビ肌着 × 5〜6枚' },
+      { id: 'c03', text: 'カバーオール × 3〜4枚' },
+      { id: 'c04', text: 'スタイ（よだれかけ）× 3〜5枚' },
+      { id: 'c05', text: '靴下 × 2〜3足' },
+      { id: 'c06', text: '帽子 × 1〜2枚（季節によって）' },
+      { id: 'c07', text: 'おくるみ × 2〜3枚' },
+    ]
+  },
+  {
+    id: 'feeding',
+    icon: '🍼',
+    name: '授乳・ミルクグッズ',
+    color: '#7aba8a',
+    colorLight: '#e4f5e8',
+    items: [
+      { id: 'f01', text: '哺乳瓶 × 2〜3本' },
+      { id: 'f02', text: '哺乳瓶消毒グッズ（電子レンジ消毒など）' },
+      { id: 'f03', text: '粉ミルク or 液体ミルク', note: 'スティックタイプが外出時に便利' },
+      { id: 'f04', text: '授乳クッション' },
+      { id: 'f05', text: '母乳パッド（母乳育児の場合）' },
+      { id: 'f06', text: '搾乳機（必要に応じて）' },
+      { id: 'f07', text: '哺乳瓶ブラシ' },
+      { id: 'f08', text: 'ミルク調乳ポット or 電気ケトル' },
+    ]
+  },
+  {
+    id: 'bath',
+    icon: '🛁',
+    name: 'お風呂・衛生グッズ',
+    color: '#c8a05a',
+    colorLight: '#fdf0da',
+    items: [
+      { id: 'a01', text: 'ベビーバス', note: '沐浴は1ヶ月健診まで別浴が基本' },
+      { id: 'a02', text: 'ベビーソープ（全身用）' },
+      { id: 'a03', text: 'ガーゼハンカチ × 10枚程度' },
+      { id: 'a04', text: 'バスタオル × 2〜3枚' },
+      { id: 'a05', text: '沐浴温度計' },
+      { id: 'a06', text: '爪切り（赤ちゃん用）' },
+      { id: 'a07', text: '綿棒（赤ちゃん用細め）' },
+      { id: 'a08', text: '体温計（赤ちゃん対応）' },
+      { id: 'a09', text: '鼻水吸引器', note: 'あると重宝する' },
+      { id: 'a10', text: 'おむつ替えシート' },
+    ]
+  },
+  {
+    id: 'diaper',
+    icon: '🩲',
+    name: 'おむつ・衛生用品',
+    color: '#9b7ec8',
+    colorLight: '#f0e8ff',
+    items: [
+      { id: 'd01', text: 'おむつ（新生児用）', note: '最初は少量から。成長が早いので買いすぎ注意' },
+      { id: 'd02', text: 'おしりふき × 複数パック' },
+      { id: 'd03', text: 'おむつ用ゴミ箱（防臭タイプ）' },
+      { id: 'd04', text: 'おむつ替えマット' },
+      { id: 'd05', text: 'おむつ保管ケース or ラック' },
+    ]
+  },
+  {
+    id: 'procedure',
+    icon: '📋',
+    name: '退院後の手続き',
+    color: '#7ab0d4',
+    colorLight: '#e0f0fc',
+    items: [
+      { id: 'p01', text: '出生届の提出（14日以内）', note: '市区町村の窓口へ。出生証明書が必要' },
+      { id: 'p02', text: '健康保険への加入手続き', note: '生後14日以内が目安' },
+      { id: 'p03', text: '児童手当の申請', note: '出生日の翌日から15日以内に申請' },
+      { id: 'p04', text: '乳幼児医療費助成の申請', note: '自治体によって異なる' },
+      { id: 'p05', text: '出産育児一時金の申請（直接支払制度以外の場合）' },
+      { id: 'p06', text: '育児休業給付金の申請（会社員の場合）', note: '会社経由でハローワークへ' },
+      { id: 'p07', text: '産後パパ育休（配偶者が会社員の場合）' },
+      { id: 'p08', text: '確定申告・医療費控除の準備', note: '年間10万超の医療費は控除対象' },
+      { id: 'p09', text: '子育て支援サービスへの登録（自治体）' },
+    ]
+  }
+];
+
+const STORAGE_KEY = 'shussan-checklist-v1';
+
+function loadChecked() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch { return {}; }
+}
+
+function saveChecked(data) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+let checked = loadChecked();
+
+function toggle(id) {
+  checked[id] = !checked[id];
+  saveChecked(checked);
+  document.getElementById('item-' + id).classList.toggle('checked', !!checked[id]);
+  document.getElementById('chk-' + id).textContent = checked[id] ? '✓' : '';
+  updateProgress();
+}
+
+function updateProgress() {
+  let total = 0, done = 0;
+  CATEGORIES.forEach(cat => {
+    let catTotal = cat.items.length, catDone = 0;
+    cat.items.forEach(item => { if (checked[item.id]) catDone++; });
+    total += catTotal; done += catDone;
+    const pct = catTotal ? Math.round(catDone / catTotal * 100) : 0;
+    const fill = document.getElementById('fill-' + cat.id);
+    const count = document.getElementById('count-' + cat.id);
+    if (fill) fill.style.width = pct + '%';
+    if (count) count.textContent = catDone + '/' + catTotal;
+  });
+  const pct = total ? Math.round(done / total * 100) : 0;
+  document.getElementById('overall-pct').innerHTML = pct + '<span>%</span>';
+  document.getElementById('overall-count').textContent = done + ' / ' + total + ' 項目';
+  document.getElementById('overall-fill').style.width = pct + '%';
+  const msgs = ['チェックを始めましょう！', 'いいスタートです！', '順調ですね🌸', 'もう少しで完成！', '準備完了です🎉'];
+  const msgIdx = pct === 0 ? 0 : pct < 25 ? 1 : pct < 50 ? 2 : pct < 100 ? 3 : 4;
+  document.getElementById('overall-msg').textContent = msgs[msgIdx];
+}
+
+function resetAll() {
+  if (!confirm('チェックを全てリセットしますか？')) return;
+  checked = {};
+  saveChecked(checked);
+  document.querySelectorAll('.item-row').forEach(el => el.classList.remove('checked'));
+  document.querySelectorAll('.item-checkbox').forEach(el => el.textContent = '');
+  updateProgress();
+}
+
+function buildUI() {
+  const container = document.getElementById('categories');
+  CATEGORIES.forEach((cat, idx) => {
+    const card = document.createElement('div');
+    card.className = 'card cat-card' + (idx === 0 ? ' open' : '');
+    card.id = 'cat-' + cat.id;
+
+    const catDone = cat.items.filter(i => checked[i.id]).length;
+
+    card.innerHTML = `
+      <div class="cat-header" onclick="toggleCat('${cat.id}')">
+        <div class="cat-left">
+          <span class="cat-icon">${cat.icon}</span>
+          <span class="cat-name">${cat.name}</span>
+        </div>
+        <div class="cat-right">
+          <span class="cat-count" id="count-${cat.id}">${catDone}/${cat.items.length}</span>
+          <span class="cat-chevron">▼</span>
+        </div>
+      </div>
+      <div class="cat-bar-wrap">
+        <div class="cat-bar">
+          <div class="cat-fill" id="fill-${cat.id}" style="background:${cat.color};width:${cat.items.length ? Math.round(catDone/cat.items.length*100) : 0}%"></div>
+        </div>
+      </div>
+      <div class="cat-items">
+        <div class="items-inner">
+          ${cat.items.map(item => `
+            <div class="item-row${checked[item.id] ? ' checked' : ''}" id="item-${item.id}" onclick="toggle('${item.id}')">
+              <div class="item-checkbox" id="chk-${item.id}">${checked[item.id] ? '✓' : ''}</div>
+              <div>
+                <div class="item-text">${item.text}</div>
+                ${item.note ? `<div class="item-note">${item.note}</div>` : ''}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+function toggleCat(id) {
+  document.getElementById('cat-' + id).classList.toggle('open');
+}
+
+buildUI();
+updateProgress();
+</script>
+
+</body>
+</html>
